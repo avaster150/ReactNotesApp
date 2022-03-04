@@ -1,9 +1,9 @@
-const makeNoteReducer = (state = {}, action) => {
+const makeNoteReducer = (state = {data: []}, action) => {
     switch (action.type) {
         case 'ADD_NOTE':
             return {
                 ...state,
-                allNotes: [state, action.payload]
+                data: [...state.data, action.payload]
             };
 
         case 'DELETE_NOTE':

@@ -4,7 +4,6 @@ import {addNote} from "./actions"
 const Form = () => {
     const [note, setNote] = useState("");
     const [time, setTime] = useState("");
-    const [notes, setNotes] = useState("");
     const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
@@ -14,7 +13,6 @@ const Form = () => {
             return
         }
         const newNote = {note, time}
-        setNotes([...notes, newNote])
         setNote("")
         dispatch(addNote(newNote))
     }
@@ -23,7 +21,7 @@ const Form = () => {
         let createDate = new Date()
         let localCreateDate = createDate.toLocaleString()
         setTime(localCreateDate)
-    }, [notes]);
+    }, [time]);
 
     return ( 
         <div className="form-area">
@@ -39,11 +37,7 @@ const Form = () => {
                 <button>Add note</button>
                 </div>
             </form>
-            <div className="show">
-            {notes && notes.map((note, index) => (
-                <p key={index}>{note.note} {note.time}</p>
-            ))}
-            </div>
+           
         </div>
      );
 }
