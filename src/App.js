@@ -1,4 +1,3 @@
-import './App.css';
 import Menu from './Menu'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Form from './Form'
