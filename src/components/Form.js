@@ -19,7 +19,7 @@ const Form = () => {
 
   useEffect(() => {
     let createDate = new Date();
-    let localCreateDate = createDate.toLocaleString();
+    let localCreateDate = createDate.toLocaleString().slice(0, -3);
     setTime(localCreateDate);
   }, [time]);
 

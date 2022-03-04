@@ -20,6 +20,8 @@ code {
 .menu {
   background-color: #eceeef;
   width: 100%;
+  margin: 0 auto;
+  min-width: 1200px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -33,6 +35,8 @@ code {
 }
 
 .form-area {
+  margin: 0 auto;
+  min-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +81,12 @@ code {
   padding: 7px 20px;
   margin-top: 10px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-text button:hover {
+  background-color: #cacaca;
+  color: white;
 }
 
 .show {
@@ -85,6 +95,8 @@ code {
 }
 
 .notes-container {
+  margin: 0 auto;
+  min-width: 1200px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -146,9 +158,16 @@ code {
   border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.button-container button:hover {
+  background-color: rgb(255, 53, 53);
 }
 
 .single-note-container {
+  margin: 0 auto;
+  min-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,6 +189,7 @@ code {
   background-color: #eceeef;
   padding: 15px;
   color: #6d6d6d;
+  margin-bottom: 50px;
 }
 
 .note-txt {
@@ -191,6 +211,11 @@ code {
   border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-button:hover {
+  background-color: rgb(255, 53, 53);
 }
 
 .back-button {
@@ -201,4 +226,31 @@ code {
   padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  background-color: #858585;
+  color: white;
+}
+
+.error-page {
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+  text-align: center;
+}
+.error-page h1 {
+  font-size: 50px;
+  color: rgb(255, 98, 98);
+}
+.error-page h2 {
+  font-size: 30px;
+  color: rgb(90, 90, 90);
+  margin-bottom: 30px;
+}
+
+.go-back {
+  text-decoration: none;
+  color: rgb(90, 90, 90);
 }

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { DELETE_NOTE } from "../store/actions";
 const AllNotes = () => {
   const allNotes = useSelector((state) => state.allNotes);
+  allNotes.data.sort((a, b) => {
+    return new Date(b.time) - new Date(a.time);
+  });
   const dispatch = useDispatch();
 
   const handleDelete = (index) => {
