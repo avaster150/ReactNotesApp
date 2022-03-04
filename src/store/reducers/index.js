@@ -2,7 +2,7 @@ import makeNoteReducer from "./makeNote";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    allNotes: makeNoteReducer,
-})
+  allNotes: makeNoteReducer,
+});
 
 export default allReducers;
